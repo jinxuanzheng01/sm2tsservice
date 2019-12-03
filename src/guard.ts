@@ -76,7 +76,7 @@ export function operationIdGuard(swagger: SwaggerJson, config: GuardConfig = {})
           methodUrl2ApiMap[methodUrl] = api;
           const dangerousOperationId = operationId.replace(dangerousOperationIdReg, '');
           if (`${operationId || ''}`.match(dangerousOperationIdReg)) {
-            // dangers[dangerousOperationId] = '';
+            dangers[dangerousOperationId] = '';
           }
           dangerousOperationId2ApiMap[dangerousOperationId] =
             dangerousOperationId2ApiMap[dangerousOperationId] || [];

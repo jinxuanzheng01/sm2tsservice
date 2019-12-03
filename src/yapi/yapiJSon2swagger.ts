@@ -144,13 +144,17 @@ export default function yapiJSon2swagger(list: API[], yapiConfig: Json2Service['
                 });
               }
               for (let p of api.req_query) {
+                let re = p.desc.match(/^\[(.*?)\]/);
+                let type = 'string';
+                if (re) type = re[1];
+
                 // Query parameters
                 paramArray.push({
                   name: p.name,
                   in: 'query',
                   required: Number(p.required) === 1, // fix '1'
                   description: p.desc,
-                  type: 'string' // always be type string
+                  type: type // always be type string
                 });
               }
               switch (
