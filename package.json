@@ -1,5 +1,5 @@
 {
-  "name": "@xuan/sm2tsservice",
+  "name": "xuan_sm2tsservice",
   "version": "1.0.0",
   "description": "swagger or yapi mock to typescript services and models",
   "author": "杨乾军 <yang@yang>",
